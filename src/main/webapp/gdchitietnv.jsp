@@ -32,27 +32,40 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Tên nhân viên</th>
-					<th scope="col">Id Bảng công</th>
+					<th scope="col">Tuần làm</th>
 					<th scope="col">Ngày làm</th>
 					<th scope="col">Số giờ làm</th>
-				
+					<th scope="col">Đơn giá làm</th>
+					<th scope="col">Tổng</th>
+
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach  items="${listLichLam}" var="mhnv" varStatus="i">
+				<c:forEach items="${listLichLam}" var="mhnv" varStatus="i">
 					<tr>
 						<th scope="row">${i.count}</th>
-						<td>${mhnv.id}</td>
+						<td>${mhnv.bangCong.nhanVien.hoTen.ten}</td>
 						<td>${mhnv.idBangCong}</td>
 						<td>${mhnv.ngayLam}</td>
 						<td>${mhnv.soGioLam}</td>
-					
+						<td>${mhnv.bangCong.donGiaLam}</td>
+						<td>${mhnv.bangCong.tong}</td>
 					</tr>
 				</c:forEach>
+					<tr>
+						<th scope="row">Tổng</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>${listLichLam[0].bangCong.tienCong}</td>
+					</tr>
 			</tbody>
 		</table>
 		<div class="d-flex justify-content-center">
-		<button>Thanh toán</button>
+			<a style="color: #000000;border: 1px solid;padding: 6px 12px "
+							href="${pageContext.request.contextPath}/thanhToanServlet?idnv=${idNV}">Thanh toán</a>
 		</div>
 	</div>
 </body>

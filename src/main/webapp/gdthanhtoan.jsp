@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quản lý nhân viên</title>
+<title>Thanh toán</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -24,39 +24,9 @@
 </head>
 <body>
 	<div>
-		<div>Chào ${quanly.hoTen.ten}</div>
-		<div></div>
-		<div class="d-flex justify-content-center" style="margin-bottom: 16px">
-			<h1>Quản lý nhân viên</h1>
+		<div class="d-flex justify-content-center align-items-center" style="margin-bottom: 16px;height: 100vh">
+			<h1>Thanh toán thành công!</h1>
 		</div>
-		<table class="table">
-			<thead class="thead-light">
-				<tr>
-					<th scope="col">ID</th>
-					<th scope="col">Tên nhân viên</th>
-					<th scope="col">Ngày</th>
-					<th scope="col">Tổng giờ làm</th>
-					<th scope="col">Đơn giá làm</th>
-					<th scope="col">Tổng</th>
-					<th scope="col">Thao tác</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach  items="${listbangcong}" var="mhnv" varStatus="i">
-					<tr>
-						<th scope="row">${i.count}</th>
-						<td>${mhnv.nhanVien.hoTen.ten}</td>
-						<td>${mhnv.tuanLam}</td>
-						<td>${mhnv.tongGioLam}</td>
-						<td>${mhnv.donGiaLam}</td>
-						<td>${mhnv.tienCong}</td>
-						<td><a style="color: #b02a37"
-							href="${pageContext.request.contextPath}/chonNhanVienServlet?idnv=${mhnv.nhanVien.id}">xem
-								chi tiết</a></td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
 	</div>
 </body>
 </html>

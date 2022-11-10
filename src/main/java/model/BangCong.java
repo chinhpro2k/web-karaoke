@@ -2,10 +2,10 @@ package model;
 
 public class BangCong {
 	private int id;
-//	private NhanVien nhanVien;
+	private NhanVien nhanVien;
 	private int idNhanVien;
 	private String tuanLam;
-	private float soGioLam,donGiaLam,tong,tienCong;
+	private float tongGioLam,donGiaLam,tong,tienCong;
 	private boolean trangThaiThanhToan;
 	
 	public int getIdNhanVien() {
@@ -18,13 +18,13 @@ public class BangCong {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public BangCong(int id, int idNhanVien, String tuanLam, float soGioLam, float donGiaLam, float tong, float tienCong,
+	public BangCong(int id, int idNhanVien, String tuanLam, float tongGioLam, float donGiaLam, float tong, float tienCong,
 			boolean trangThaiThanhToan) {
 		super();
 		this.id = id;
 		this.idNhanVien = idNhanVien;
 		this.tuanLam = tuanLam;
-		this.soGioLam = soGioLam;
+		this.tongGioLam = tongGioLam;
 		this.donGiaLam = donGiaLam;
 		this.tong = tong;
 		this.tienCong = tienCong;
@@ -36,23 +36,23 @@ public class BangCong {
 	public void setId(int id) {
 		this.id = id;
 	}
-//	public NhanVien getNhanVien() {
-//		return nhanVien;
-//	}
-//	public void setNhanVien(NhanVien nhanVien) {
-//		this.nhanVien = nhanVien;
-//	}
+	public NhanVien getNhanVien() {
+		return nhanVien;
+	}
+	public void setNhanVien(NhanVien nhanVien) {
+		this.nhanVien = nhanVien;
+	}
 	public String getTuanLam() {
 		return tuanLam;
 	}
 	public void setTuanLam(String tuanLam) {
 		this.tuanLam = tuanLam;
 	}
-	public float getSoGioLam() {
-		return soGioLam;
+	public float getTongGioLam() {
+		return tongGioLam;
 	}
-	public void setSoGioLam(float soGioLam) {
-		this.soGioLam = soGioLam;
+	public void setTongGioLam(float tongGioLam) {
+		this.tongGioLam = tongGioLam;
 	}
 	public float getDonGiaLam() {
 		return donGiaLam;

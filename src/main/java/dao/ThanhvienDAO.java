@@ -40,4 +40,5 @@ public class ThanhvienDAO extends DAO {
 		}
 		return kq;
 	}
+	
 }

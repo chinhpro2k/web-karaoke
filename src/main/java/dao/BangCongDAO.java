@@ -27,8 +27,15 @@ public class BangCongDAO extends DAO {
 				BangCong kh = new BangCong();
 				kh.setId(rs.getInt("id"));
 				kh.setIdNhanVien(rs.getInt("idNhanVien"));
+				NhanVien nv=new NhanVien();
+				Hoten ht=new Hoten();
+				ht.setHodem(rs.getString("hodem"));
+				ht.setTen(rs.getString("ten"));
+				nv.setId(rs.getInt("idNhanVien"));
+				nv.setHoTen(ht);
+				kh.setNhanVien(nv);
 				kh.setTuanLam(rs.getString("tuanLam"));
-				kh.setSoGioLam(rs.getFloat("soGioLam"));
+				kh.setTongGioLam(rs.getFloat("tongGioLam"));
 				kh.setDonGiaLam(rs.getFloat("donGiaLam"));
 				kh.setTong(rs.getFloat("tong"));
 				kh.setTienCong(rs.getFloat("tienCong"));

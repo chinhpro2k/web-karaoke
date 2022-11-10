@@ -29,6 +29,7 @@ public class ChonNhanVienServlet extends HttpServlet {
 		System.out.println(listLich);
 
 //	        ArrayList<LopHocPhan> listLopHocPhan = new LopHocPhanDAO().getLHPchoSVdangki(idmhkh);
+		   request.getSession().setAttribute("idNV",idnv);
 	        request.getSession().setAttribute("listLichLam",listLich);
 	        request.getRequestDispatcher("/gdchitietnv.jsp").forward(request,response);
 	}
